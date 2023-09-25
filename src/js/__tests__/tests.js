@@ -92,3 +92,10 @@ test('create bad name Character2', () => {
   }
   expect(badName).toThrow();
 });
+
+test('create bad type of Hero', () => {
+  expect(() => {
+    const person = new Character('Gendalf', 'test');
+    person.health = 100;
+  }).toThrow();
+});
